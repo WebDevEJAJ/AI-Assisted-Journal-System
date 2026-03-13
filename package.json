@@ -1,0 +1,21 @@
+{
+  "name": "arvyax-journal-system",
+  "version": "1.0.0",
+  "description": "AI-Assisted Journal System - Full Stack Application",
+  "private": true,
+  "scripts": {
+    "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install && cd ..",
+    "backend": "cd backend && npm start",
+    "frontend": "cd frontend && npm start",
+    "dev": "npm run backend & npm run frontend"
+  },
+  "keywords": [
+    "journal",
+    "emotion-analysis",
+    "ai",
+    "nature",
+    "mindfulness"
+  ],
+  "author": "ArvyaX Development Team",
+  "license": "MIT"
+}
