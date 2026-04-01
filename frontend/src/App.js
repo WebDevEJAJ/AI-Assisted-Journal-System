@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import './App.css';
 import Login from './Login';
@@ -14,9 +14,9 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [activeTab, setActiveTab] = useState('write');
 
-   const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+  const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
 
-  const fetchEntries = async () => {
+  const fetchEntries = useCallback(async () => {
     try {
       setLoading(true);
       const response = await axios.get(`${API_URL}/api/journal/${userId}`);
@@ -27,7 +27,7 @@ function App() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [API_URL, userId]);
 
   // Fetch entries on mount and when userId changes
   useEffect(() => {
