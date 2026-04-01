@@ -14,7 +14,7 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [activeTab, setActiveTab] = useState('write');
 
-  const API_URL = 'http://localhost:5000';
+  const API_URL = 'https://ai-assisted-journal-system-1.onrender.com';
 
   // Fetch entries on mount and when userId changes
   useEffect(() => {
