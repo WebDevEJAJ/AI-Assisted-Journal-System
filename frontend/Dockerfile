@@ -16,7 +16,7 @@ WORKDIR /app
 
 COPY --from=builder /app/build ./build
 
-ENV REACT_APP_API_URL=http://localhost:5000
+ENV REACT_APP_API_URL=https://ai-assisted-journal-system-1.onrender.com
 
 EXPOSE 3000
 
