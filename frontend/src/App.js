@@ -16,13 +16,6 @@ function App() {
 
   const API_URL = 'https://ai-assisted-journal-system-1.onrender.com';
 
-  // Fetch entries on mount and when userId changes
-  useEffect(() => {
-    if (userId) {
-      fetchEntries();
-    }
-  }, [userId]);
-
   const fetchEntries = async () => {
     try {
       setLoading(true);
@@ -35,6 +28,13 @@ function App() {
       setLoading(false);
     }
   };
+
+  // Fetch entries on mount and when userId changes
+  useEffect(() => {
+    if (userId) {
+      fetchEntries();
+    }
+  }, [userId, fetchEntries]);
 
   const handleSubmitEntry = async (e) => {
     e.preventDefault();
