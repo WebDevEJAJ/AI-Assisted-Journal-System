@@ -1,4 +1,4 @@
-# 🌿 ArvyaX AI-Assisted Journal System
+# AI-Assisted Journal System
 
 A full-stack application that helps users track and analyze their emotions through immersive nature sessions using AI-powered LLM analysis.
 
@@ -329,7 +329,7 @@ MIT
 
 ## Author
 
-ArvyaX Development Team
+WebDevEJAJ
 
 ---
 
