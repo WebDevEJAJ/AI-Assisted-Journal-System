@@ -2,7 +2,6 @@
   "name": "arvyax-journal-frontend",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://ai-assisted-journal-system-1.onrender.com",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
