@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
 import Login from './Login';
@@ -21,9 +21,9 @@ function App() {
     if (userId) {
       fetchEntries();
     }
-}, [userId, fetchEntries]);
+  }, [userId]);
 
- const fetchEntries = useCallback(async () => {
+  const fetchEntries = async () => {
     try {
       setLoading(true);
       const response = await axios.get(`${API_URL}/api/journal/${userId}`);
