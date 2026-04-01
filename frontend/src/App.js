@@ -14,7 +14,7 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [activeTab, setActiveTab] = useState('write');
 
-  const API_URL = 'https://ai-assisted-journal-system-1.onrender.com';
+   const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
 
   const fetchEntries = async () => {
     try {
